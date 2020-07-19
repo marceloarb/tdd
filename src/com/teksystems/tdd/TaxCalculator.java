@@ -33,12 +33,23 @@ public class TaxCalculator {
 		return price.add(taxRate).round(mc);
 	}
 
-	public BigDecimal calculateMultipleTaxTotal(Iterable<? extends Item> iterable) {
+	public BigDecimal calculateMultipleTaxTotal(Iterable<? extends Item> items) {
 		double totalTax = 0.0;
-		for(Item item : iterable) {
+		for(Item item : items) {
 			totalTax += calculateTax(item.getPrice(item).doubleValue(),calculateTaxRate(item.getIsExempt(item),item.getIsImported(item))).doubleValue();
 		}
 		return BigDecimal.valueOf(totalTax);
 		
 	}
+	public BigDecimal calculateMultipleItemsTotalPrice(Iterable<? extends Item> items) {
+		double totalPrice = 0.0;
+		BigDecimal tax = calculateMultipleTaxTotal(items);
+		for(Item item : items) {
+			totalPrice += item.getPrice(item).doubleValue();
+		}
+		BigDecimal totalOrder = calculateTotal(BigDecimal.valueOf(totalPrice),tax);
+		return totalOrder;
+		
+	}
+	
 }

@@ -5,7 +5,7 @@
     <classes>
       <class name="test.CalculateTotalOrderTest">
         <methods>
-          <include name="testCalculateTotalTax"/>
+          <include name="testCalculateMultipleItemsTotalPrice"/>
         </methods>
       </class> <!-- test.CalculateTotalOrderTest -->
     </classes>

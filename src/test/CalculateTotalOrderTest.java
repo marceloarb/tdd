@@ -13,7 +13,7 @@ import com.teksystems.tdd.TaxCalculator;
 @Test
 public class CalculateTotalOrderTest {
 	
-	public void testCalculateMultipleItemsTax() {
+	public void testCalculateMultipleItemsTaxTotal() {
 		TaxCalculator taxCalculator = TaxCalculator.getInstace();
 		String expected = NumberFormat.getCurrencyInstance().format(BigDecimal.valueOf(1.50));
 		Order order = Order.getInstance();
@@ -26,9 +26,9 @@ public class CalculateTotalOrderTest {
 		String actual = NumberFormat.getCurrencyInstance().format(taxCalculator.calculateMultipleTaxTotal(order.getItems()));
 		Assert.assertEquals(actual, expected);
 	}
-	public void testCalculateMultipleItems() {
+	public void testCalculateMultipleItemsTotalPrice() {
 		TaxCalculator taxCalculator = TaxCalculator.getInstace();
-		String expected = NumberFormat.getCurrencyInstance().format(BigDecimal.valueOf(1.50));
+		String expected = NumberFormat.getCurrencyInstance().format(BigDecimal.valueOf(29.83));
 		Order order = Order.getInstance();
         Item book = Item.getInstance("book", 1, BigDecimal.valueOf(12.49),false,false);
         Item chocolate = Item.getInstance("chocolate bar", 1, BigDecimal.valueOf(0.85),false,false);
@@ -36,7 +36,7 @@ public class CalculateTotalOrderTest {
         order.addItem(cd);
         order.addItem(book);
         order.addItem(chocolate);
-		String actual = NumberFormat.getCurrencyInstance().format(taxCalculator.calculateMultipleTaxTotal(order.getItems()));
+		String actual = NumberFormat.getCurrencyInstance().format(taxCalculator.calculateMultipleItemsTotalPrice(order.getItems()));
 		Assert.assertEquals(actual, expected);
 	}
 }
