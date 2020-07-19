@@ -5,7 +5,7 @@
     <classes>
       <class name="test.TaxCalculatorTests">
         <methods>
-          <include name="testCalculateTax_sales_import"/>
+          <include name="testCalculateTax_salesAndimport"/>
         </methods>
       </class> <!-- test.TaxCalculatorTests -->
     </classes>
