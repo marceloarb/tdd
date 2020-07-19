@@ -6,6 +6,8 @@ import java.text.NumberFormat;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.teksystems.tdd.Item;
+import com.teksystems.tdd.Order;
 import com.teksystems.tdd.TaxCalculator;
 
 @Test
@@ -32,10 +34,17 @@ public class TaxCalculatorTests {
 		Assert.assertEquals(actual, expected);
 	}
 	
-    public void testCalculateTax_sales() {
+    public void testCalculateTax_NotSalesAndNotImported() {
     	TaxCalculator taxCalculator = TaxCalculator.getInstace();
     	String expected = NumberFormat.getCurrencyInstance().format(BigDecimal.valueOf(0.00));
     	String actual = NumberFormat.getCurrencyInstance().format(taxCalculator.calculateTax(12.49, taxCalculator.calculateTaxRate(false, false)));
+		Assert.assertEquals(actual, expected);
+    	
+    }
+    public void testCalculateTax_sales() {
+    	TaxCalculator taxCalculator = TaxCalculator.getInstace();
+    	String expected = NumberFormat.getCurrencyInstance().format(BigDecimal.valueOf(1.50));
+    	String actual = NumberFormat.getCurrencyInstance().format(taxCalculator.calculateTax(14.99, taxCalculator.calculateTaxRate(true, false)));
 		Assert.assertEquals(actual, expected);
     	
     }
@@ -45,33 +54,29 @@ public class TaxCalculatorTests {
     	String actual = NumberFormat.getCurrencyInstance().format(taxCalculator.calculateTax(10.00, taxCalculator.calculateTaxRate(false, true)));
 		Assert.assertEquals(actual, expected);
     }
-    public void testCalculateTax_salesAndimport() {
+    public void testCalculateTax_salesAndImport() {
     	TaxCalculator taxCalculator = TaxCalculator.getInstace();
     	String expected = NumberFormat.getCurrencyInstance().format(BigDecimal.valueOf(7.15));
     	String actual = NumberFormat.getCurrencyInstance().format(taxCalculator.calculateTax(47.50, taxCalculator.calculateTaxRate(true, true)));
 		Assert.assertEquals(actual, expected);
     }
-//    public void testCalculateTotal_sales() {
-//        BigDecimal price = BigDecimal.valueOf(14.99);
-//        BigDecimal expected = BigDecimal.valueOf(16.49);
-//        TaxCalculator taxCalculator = TaxCalculator.getInstace();
-//        BigDecimal actual = taxCalculator.calculateTax(price, taxCalculator.calculateTaxRate(true, false));
-//        Assert.assertEquals(actual, expected);
-//    }
-//    public void testCalculateTotal_import() {
-//        BigDecimal price = BigDecimal.valueOf(10.00);
-//        TaxCalculator taxCalculator = TaxCalculator.getInstace();
-//        String expected = NumberFormat.getCurrencyInstance().format(BigDecimal.valueOf(10.50));
-//        String actual = NumberFormat.getCurrencyInstance().format(taxCalculator.calculateTax(price, taxCalculator.calculateTaxRate(false,true)));
-//        Assert.assertEquals(actual, expected);
-//    }
-//    
-//    public void testCalculateTotal_salesAndimport() {
-//        BigDecimal price = BigDecimal.valueOf(47.50);
-//        BigDecimal expected = BigDecimal.valueOf(54.65);
-//        TaxCalculator taxCalculator = TaxCalculator.getInstace();
-//        BigDecimal actual = taxCalculator.calculateTax(price, taxCalculator.calculateTaxRate(true, true));
-//        Assert.assertEquals(actual, expected);
-//    }
+    public void testCalculateTotal_salesAndImport() {
+    	TaxCalculator taxCalculator = TaxCalculator.getInstace();
+    	String expected = NumberFormat.getCurrencyInstance().format(BigDecimal.valueOf(54.65));
+    	String actual = NumberFormat.getCurrencyInstance().format(taxCalculator.calculateTotal(BigDecimal.valueOf(47.50), taxCalculator.calculateTax(47.50, taxCalculator.calculateTaxRate(true, true))));
+		Assert.assertEquals(actual, expected);
+    }
+    public void testCalculateTotal_Import() {
+    	TaxCalculator taxCalculator = TaxCalculator.getInstace();
+    	String expected = NumberFormat.getCurrencyInstance().format(BigDecimal.valueOf(10.50));
+    	String actual = NumberFormat.getCurrencyInstance().format(taxCalculator.calculateTotal(BigDecimal.valueOf(10.00), taxCalculator.calculateTax(10.00, taxCalculator.calculateTaxRate(false, true))));
+		Assert.assertEquals(actual, expected);
+    }   
+    public void testCalculateTotal_Sales() {
+    	TaxCalculator taxCalculator = TaxCalculator.getInstace();
+    	String expected = NumberFormat.getCurrencyInstance().format(BigDecimal.valueOf(16.49));
+    	String actual = NumberFormat.getCurrencyInstance().format(taxCalculator.calculateTotal(BigDecimal.valueOf(14.99), taxCalculator.calculateTax(14.99, taxCalculator.calculateTaxRate(true, false))));
+		Assert.assertEquals(actual, expected);
+    }
     
 }

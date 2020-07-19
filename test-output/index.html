@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,   7 passed</span>
+                    <span class="method-stats">11 methods,   11 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -124,6 +124,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="test.TaxCalculatorTests" class="method navigator-link" hash-for-method="testCalculateTax_NotSalesAndNotImported">testCalculateTax_NotSalesAndNotImported</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="test.TaxCalculatorTests" class="method navigator-link" hash-for-method="testCalculateTax_import">testCalculateTax_import</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -134,7 +139,22 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="test.TaxCalculatorTests" class="method navigator-link" hash-for-method="testCalculateTax_salesAndimport">testCalculateTax_salesAndimport</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="test.TaxCalculatorTests" class="method navigator-link" hash-for-method="testCalculateTax_salesAndImport">testCalculateTax_salesAndImport</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="test.TaxCalculatorTests" class="method navigator-link" hash-for-method="testCalculateTotal_Import">testCalculateTotal_Import</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="test.TaxCalculatorTests" class="method navigator-link" hash-for-method="testCalculateTotal_Sales">testCalculateTotal_Sales</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="test.TaxCalculatorTests" class="method navigator-link" hash-for-method="testCalculateTotal_salesAndImport">testCalculateTotal_salesAndImport</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -185,6 +205,13 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="testCalculateTax_NotSalesAndNotImported">
+                  </a> <!-- testCalculateTax_NotSalesAndNotImported -->
+                  <span class="method-name">testCalculateTax_NotSalesAndNotImported</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="testCalculateTax_import">
                   </a> <!-- testCalculateTax_import -->
                   <span class="method-name">testCalculateTax_import</span>
@@ -199,9 +226,30 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testCalculateTax_salesAndimport">
-                  </a> <!-- testCalculateTax_salesAndimport -->
-                  <span class="method-name">testCalculateTax_salesAndimport</span>
+                  <a name="testCalculateTax_salesAndImport">
+                  </a> <!-- testCalculateTax_salesAndImport -->
+                  <span class="method-name">testCalculateTax_salesAndImport</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCalculateTotal_Import">
+                  </a> <!-- testCalculateTotal_Import -->
+                  <span class="method-name">testCalculateTotal_Import</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCalculateTotal_Sales">
+                  </a> <!-- testCalculateTotal_Sales -->
+                  <span class="method-name">testCalculateTotal_Sales</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCalculateTotal_salesAndImport">
+                  </a> <!-- testCalculateTotal_salesAndImport -->
+                  <span class="method-name">testCalculateTotal_salesAndImport</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -209,7 +257,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/cq/2rlvvl_j42j57ydm4trmxlq00000gn/T/testng-eclipse--195378782/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/cq/2rlvvl_j42j57ydm4trmxlq00000gn/T/testng-eclipse-292313660/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -258,40 +306,56 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(11);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testCalculateTax_import')
+data.setCell(0, 1, 'testCalculateTax_NotSalesAndNotImported')
 data.setCell(0, 2, 'test.TaxCalculatorTests')
 data.setCell(0, 3, 45);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testCalculateTaxRate_Imported')
 data.setCell(1, 2, 'test.TaxCalculatorTests')
-data.setCell(1, 3, 28);
+data.setCell(1, 3, 21);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testCalculateTax_sales')
+data.setCell(2, 1, 'testCalculateTaxRate_SalesAndImported')
 data.setCell(2, 2, 'test.TaxCalculatorTests')
-data.setCell(2, 3, 6);
+data.setCell(2, 3, 2);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testCalculateTaxRate_NotSalesAndNotImported')
+data.setCell(3, 1, 'testCalculateTotal_salesAndImport')
 data.setCell(3, 2, 'test.TaxCalculatorTests')
-data.setCell(3, 3, 3);
+data.setCell(3, 3, 2);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testCalculateTax_salesAndimport')
+data.setCell(4, 1, 'testCalculateTax_salesAndImport')
 data.setCell(4, 2, 'test.TaxCalculatorTests')
-data.setCell(4, 3, 3);
+data.setCell(4, 3, 2);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testCalculateTaxRate_SalesAndImported')
+data.setCell(5, 1, 'testCalculateTaxRate_Sales')
 data.setCell(5, 2, 'test.TaxCalculatorTests')
-data.setCell(5, 3, 1);
+data.setCell(5, 3, 2);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testCalculateTaxRate_Sales')
+data.setCell(6, 1, 'testCalculateTax_import')
 data.setCell(6, 2, 'test.TaxCalculatorTests')
-data.setCell(6, 3, 1);
+data.setCell(6, 3, 2);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testCalculateTotal_Sales')
+data.setCell(7, 2, 'test.TaxCalculatorTests')
+data.setCell(7, 3, 2);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testCalculateTaxRate_NotSalesAndNotImported')
+data.setCell(8, 2, 'test.TaxCalculatorTests')
+data.setCell(8, 3, 2);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testCalculateTotal_Import')
+data.setCell(9, 2, 'test.TaxCalculatorTests')
+data.setCell(9, 3, 2);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testCalculateTax_sales')
+data.setCell(10, 2, 'test.TaxCalculatorTests')
+data.setCell(10, 3, 2);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 87 ms</span>
+              <span class="suite-total-time">Total running time: 84 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -324,27 +388,43 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testCalculateTaxRate_NotSalesAndNotImported</span>
-                <span class="method-start">35 ms</span>
+                <span class="method-start">26 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testCalculateTaxRate_Sales</span>
-                <span class="method-start">43 ms</span>
+                <span class="method-start">31 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testCalculateTaxRate_SalesAndImported</span>
-                <span class="method-start">48 ms</span>
+                <span class="method-start">35 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCalculateTax_NotSalesAndNotImported</span>
+                <span class="method-start">39 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testCalculateTax_import</span>
-                <span class="method-start">52 ms</span>
+                <span class="method-start">88 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testCalculateTax_sales</span>
-                <span class="method-start">98 ms</span>
+                <span class="method-start">94 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testCalculateTax_salesAndimport</span>
-                <span class="method-start">106 ms</span>
+                <span class="method-name">testCalculateTax_salesAndImport</span>
+                <span class="method-start">99 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCalculateTotal_Import</span>
+                <span class="method-start">107 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCalculateTotal_Sales</span>
+                <span class="method-start">115 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCalculateTotal_salesAndImport</span>
+                <span class="method-start">118 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

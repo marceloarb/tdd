@@ -27,9 +27,9 @@ public class TaxCalculator {
 		return taxRate/100;
 		
 	}
-	public BigDecimal calculateTotal(BigDecimal price, double taxRate) {
+	public BigDecimal calculateTotal(BigDecimal price, BigDecimal taxRate) {
 		MathContext mc = new MathContext(4);
 		
-		return price.add(price.multiply(BigDecimal.valueOf(taxRate))).round(mc);
+		return price.add(taxRate).round(mc);
 	}
 }
