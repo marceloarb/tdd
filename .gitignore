@@ -4,3 +4,6 @@
 *.jar
 target/
 bin/
+.DS_Store
+.classpath
+.project
