@@ -1,6 +1,6 @@
 .idea
-.idea
 *.class
 *.war
 *.jar
-bin/target
+target/
+bin/
