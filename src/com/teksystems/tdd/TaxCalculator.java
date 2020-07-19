@@ -15,7 +15,14 @@ public class TaxCalculator {
 
 	public BigDecimal calculateTax(BigDecimal price, double taxRate) {
 		MathContext mc = new MathContext(4);
-		RoundingMode roudingMode;
 		return price.add(price.multiply(BigDecimal.valueOf(taxRate))).round(mc);
+	}
+
+	public double calculateTaxRate(boolean isSales, boolean isImported) {
+		double taxRate = 0;
+		if(isSales) taxRate = 0.1;
+		else if(isImported) taxRate = 0.05;
+		return taxRate;
+		
 	}
 }
