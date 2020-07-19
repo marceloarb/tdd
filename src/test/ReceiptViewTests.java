@@ -18,7 +18,7 @@ public class ReceiptViewTests {
     public void testPrePrint_singleItem() {
         BigDecimal price = BigDecimal.valueOf(12.49);
         Order order = Order.getInstance();
-        Item book = Item.getInstance("book", 1, BigDecimal.valueOf(12.49));
+        Item book = Item.getInstance("book", 1, BigDecimal.valueOf(12.49),false,false);
         order.addItem(book);
         Receipt receipt = Receipt.getInstance(order);
         String expected = getItemFormat(price, "book", 1);
@@ -30,8 +30,8 @@ public class ReceiptViewTests {
         String expectedBook = getItemFormat(BigDecimal.valueOf(12.49), "book", 1);
         String expectedChocolate = getItemFormat(BigDecimal.valueOf(0.85), "chocolate bar", 1);
         Order order = Order.getInstance();
-        Item book = Item.getInstance("book", 1, BigDecimal.valueOf(12.49));
-        Item chocolate = Item.getInstance("chocolate bar", 1, BigDecimal.valueOf(0.85));
+        Item book = Item.getInstance("book", 1, BigDecimal.valueOf(12.49),false,false);
+        Item chocolate = Item.getInstance("chocolate bar", 1, BigDecimal.valueOf(0.85),false,false);
         order.addItem(book);
         order.addItem(chocolate);
         Receipt receipt = Receipt.getInstance(order);

@@ -1,57 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-07-19T14:59:11 CDT" name="Default suite" finished-at="2020-07-19T14:59:11 CDT" duration-ms="166">
+  <suite started-at="2020-07-19T16:39:18 CDT" name="Default suite" finished-at="2020-07-19T16:39:18 CDT" duration-ms="125">
     <groups>
     </groups>
-    <test started-at="2020-07-19T14:59:11 CDT" name="Default test" finished-at="2020-07-19T14:59:11 CDT" duration-ms="166">
-      <class name="test.TaxCalculatorTests">
-        <test-method signature="testCalculateTaxRate_Imported()[pri:0, instance:test.TaxCalculatorTests@291caca8]" started-at="2020-07-19T14:59:11 CDT" name="testCalculateTaxRate_Imported" finished-at="2020-07-19T14:59:11 CDT" duration-ms="21" status="PASS">
+    <test started-at="2020-07-19T16:39:18 CDT" name="Default test" finished-at="2020-07-19T16:39:18 CDT" duration-ms="125">
+      <class name="test.CalculateTotalOrderTest">
+        <test-method signature="testCalculateTotalTax()[pri:0, instance:test.CalculateTotalOrderTest@71e9ddb4]" started-at="2020-07-19T16:39:18 CDT" name="testCalculateTotalTax" finished-at="2020-07-19T16:39:18 CDT" duration-ms="67" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCalculateTaxRate_Imported -->
-        <test-method signature="testCalculateTaxRate_NotSalesAndNotImported()[pri:0, instance:test.TaxCalculatorTests@291caca8]" started-at="2020-07-19T14:59:11 CDT" name="testCalculateTaxRate_NotSalesAndNotImported" finished-at="2020-07-19T14:59:11 CDT" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCalculateTaxRate_NotSalesAndNotImported -->
-        <test-method signature="testCalculateTaxRate_Sales()[pri:0, instance:test.TaxCalculatorTests@291caca8]" started-at="2020-07-19T14:59:11 CDT" name="testCalculateTaxRate_Sales" finished-at="2020-07-19T14:59:11 CDT" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCalculateTaxRate_Sales -->
-        <test-method signature="testCalculateTaxRate_SalesAndImported()[pri:0, instance:test.TaxCalculatorTests@291caca8]" started-at="2020-07-19T14:59:11 CDT" name="testCalculateTaxRate_SalesAndImported" finished-at="2020-07-19T14:59:11 CDT" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCalculateTaxRate_SalesAndImported -->
-        <test-method signature="testCalculateTax_NotSalesAndNotImported()[pri:0, instance:test.TaxCalculatorTests@291caca8]" started-at="2020-07-19T14:59:11 CDT" name="testCalculateTax_NotSalesAndNotImported" finished-at="2020-07-19T14:59:11 CDT" duration-ms="45" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCalculateTax_NotSalesAndNotImported -->
-        <test-method signature="testCalculateTax_import()[pri:0, instance:test.TaxCalculatorTests@291caca8]" started-at="2020-07-19T14:59:11 CDT" name="testCalculateTax_import" finished-at="2020-07-19T14:59:11 CDT" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCalculateTax_import -->
-        <test-method signature="testCalculateTax_sales()[pri:0, instance:test.TaxCalculatorTests@291caca8]" started-at="2020-07-19T14:59:11 CDT" name="testCalculateTax_sales" finished-at="2020-07-19T14:59:11 CDT" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCalculateTax_sales -->
-        <test-method signature="testCalculateTax_salesAndImport()[pri:0, instance:test.TaxCalculatorTests@291caca8]" started-at="2020-07-19T14:59:11 CDT" name="testCalculateTax_salesAndImport" finished-at="2020-07-19T14:59:11 CDT" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCalculateTax_salesAndImport -->
-        <test-method signature="testCalculateTotal_Import()[pri:0, instance:test.TaxCalculatorTests@291caca8]" started-at="2020-07-19T14:59:11 CDT" name="testCalculateTotal_Import" finished-at="2020-07-19T14:59:11 CDT" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCalculateTotal_Import -->
-        <test-method signature="testCalculateTotal_Sales()[pri:0, instance:test.TaxCalculatorTests@291caca8]" started-at="2020-07-19T14:59:11 CDT" name="testCalculateTotal_Sales" finished-at="2020-07-19T14:59:11 CDT" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCalculateTotal_Sales -->
-        <test-method signature="testCalculateTotal_salesAndImport()[pri:0, instance:test.TaxCalculatorTests@291caca8]" started-at="2020-07-19T14:59:11 CDT" name="testCalculateTotal_salesAndImport" finished-at="2020-07-19T14:59:11 CDT" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCalculateTotal_salesAndImport -->
-      </class> <!-- test.TaxCalculatorTests -->
+        </test-method> <!-- testCalculateTotalTax -->
+      </class> <!-- test.CalculateTotalOrderTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
