@@ -12,7 +12,7 @@ import com.teksystems.tdd.TaxCalculator;
 
 @Test
 public class CalculateTotalOrderTest {
-	
+	@Test
 	public void testCalculateMultipleItemsTaxTotal() {
 		TaxCalculator taxCalculator = TaxCalculator.getInstace();
 		String expected = NumberFormat.getCurrencyInstance().format(BigDecimal.valueOf(1.50));
@@ -25,7 +25,7 @@ public class CalculateTotalOrderTest {
         order.addItem(chocolate);
 		String actual = NumberFormat.getCurrencyInstance().format(taxCalculator.calculateMultipleTaxTotal(order.getItems()));
 		Assert.assertEquals(actual, expected);
-	}
+	}@Test
 	public void testCalculateMultipleItemsTotalPrice() {
 		TaxCalculator taxCalculator = TaxCalculator.getInstace();
 		String expected = NumberFormat.getCurrencyInstance().format(BigDecimal.valueOf(29.83));
